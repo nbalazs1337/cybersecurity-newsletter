@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+	<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>Zero Day Vulnerabilities</title>
+</head>
+<body>
+    <h1 id="header">Zero Day Vulnerabilities</h1>
+    <!--> FROM API<!-->
+       <div>
+    {% for result in results %}
+        <li>{{ result.title }}
+        <ul>{{ result }}</ul>
+         </li>
+    {% endfor %}
+</div>
+
+
+    <!--> FROM DATABASE <!-->
+        <div> 
+    {% for item in items %}
+    <li>{{ item.title }}</li>
+{% endfor %}
+</div>
+</body>
+</html>
