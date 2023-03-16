@@ -1,5 +1,15 @@
 import requests
-
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.http import HttpResponse
+from django.core.mail import EmailMessage
+from django.utils.html import strip_tags
+from django.core.mail import EmailMultiAlternatives
+from django.conf import settings
+import os
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+import smtplib
 
 
 def get_feedly_data():
@@ -15,5 +25,33 @@ def get_feedly_data():
     response = requests.get(url, headers=headers)
     return response.json()
     #print(response.json())
-
 #get_feedly_data()
+
+
+
+def send_newsletter(recipient_list, data):
+    # Get the list of recipients
+    recipients = ['negrea.balazs@yahoo.com']
+
+    # Render the newsletter template with data from Feedly API
+    html_message = render_to_string('my_template.html', {'data': data})
+    
+
+    # Set up the email message
+    msg = MIMEMultipart('alternative')
+    msg['Subject'] = 'Your Feedly Newsletter'
+    msg['From'] = settings.EMAIL_HOST_USER
+    msg['To'] = ', '.join(recipients)
+    msg.attach(MIMEText(html_message, 'html'))
+    
+
+    # Set up the SMTP server connection
+    server = smtplib.SMTP(settings.EMAIL_HOST, settings.EMAIL_PORT)
+    server.starttls()
+    server.login(settings.EMAIL_HOST_USER, os.environ.get('EMAIL_PASSWORD'))
+
+    # Send the email
+    server.sendmail(settings.EMAIL_HOST_USER, recipients, msg.as_string())
+    server.quit()
+
+    print('Newsletter sent successfully!')
