@@ -1,7 +1,141 @@
+/*  CULORILE AROBS
+#0b68b6      albastru
+#57bc4f      verde            */
+
 h1{
     color: blueviolet;
 }
 
-body{
-    background-color: blue;
+body {
+    background-color: grey;
 }
+
+
+
+#top_section {
+    width: 456pt;
+    padding: 0in;
+}
+
+#poza_top_section {
+    width: 100%;
+}
+
+#second_section {
+    width: 457pt;
+    background: #57bc4f;
+    padding: 20pt 30pt 20pt 30pt;
+}
+
+#text_second_section {
+    font-size: 16pt;
+    font-family: Impact, sans-serif, serif, EmojiFont;
+    color: rgb(231, 236, 247);
+    text-transform: uppercase;
+}
+
+#third_section {
+    background-color: #0b68b6;
+    width: 457pt;
+    border-top: none;
+    padding: 15pt 30pt 15pt 30pt;
+}
+
+#text_greet {
+    font-family: Arial, sans-serif, serif, EmojiFont;
+    color: rgb(239, 247, 255);
+    font-weight: bold;
+}
+
+.text_opening {
+    font-family: Arial, sans-serif, serif, EmojiFont;
+    color: rgb(239, 247, 255);
+}
+
+#text_third_section_top{
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+#text_third_section_bottom{
+    padding-top: 30px;
+}
+
+#header_c1 {
+    text-align: center;
+    width: 18.75pt; 
+    padding: 0.75pt 0.75pt 0.75pt 0.75pt;
+}
+
+#header_c2 {
+    text-align: center;
+    width: 187.5pt; 
+    padding: 0.75pt 0.75pt 0.75pt 0.75pt;
+}
+
+#header_c3 {
+    text-align: center;
+    width: 112.5pt; 
+    padding: 0.75pt 0.75pt 0.75pt 0.75pt;
+}
+
+.header_title {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.content_title{
+    color: white;
+    text-decoration: none;
+    padding: 0.75pt 0.75pt 0.75pt 0.75pt;
+    font-size: 10pt;
+}
+
+#readmore_button{
+    width: 100px;
+    margin-bottom: 15px;
+    border-radius: 50px;
+    background-color: #57bc4f;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+}
+
+#readmore_button:hover{
+    width: 100px;
+    margin-bottom: 15px;
+    border-radius: 50px;
+    background-color: #647163;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.button_id{
+    text-align: center;
+}
+
+#critical_button{
+    margin-bottom: 25px;
+    border: none;
+    background-color: rgb(187, 3, 3);
+    color: white;
+    border-radius: 50px;
+    cursor:default;
+}
+
+
+.under_table{
+    font-family: Arial, sans-serif, serif, EmojiFont;
+    color: rgb(239, 247, 255);
+}
+
+
+
+
+
+
+/* FOOTER */
