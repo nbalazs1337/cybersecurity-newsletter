@@ -10,6 +10,13 @@ import os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import smtplib
+import django
+import boto3
+from botocore.exceptions import ClientError
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'my_env.settings')
+django.setup()
+
 
 
 def get_feedly_data():
@@ -24,34 +31,49 @@ def get_feedly_data():
     }
     response = requests.get(url, headers=headers)
     return response.json()
-    #print(response.json())
-#get_feedly_data()
+
 
 
 
 def send_newsletter(recipient_list, data):
-    # Get the list of recipients
-    recipients = ['negrea.balazs@yahoo.com']
+   
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'my_env.settings')
+    django.setup()
+
 
     # Render the newsletter template with data from Feedly API
-    html_message = render_to_string('my_template.html', {'data': data})
-    
+    html_message = render_to_string('my_template.html', {'results': data})
+    print(html_message)
+    plain_message = "Your Feedly Newsletter"
+
+    # create an instance of the SES client
+    ses_client = boto3.client('ses', 
+        region_name='eu-north-1', 
+        aws_access_key_id=settings.AWS_ACCESS_KEY, 
+        aws_secret_access_key=settings.AWS_SECRET_KEY
+    )
 
     # Set up the email message
-    msg = MIMEMultipart('alternative')
-    msg['Subject'] = 'Your Feedly Newsletter'
-    msg['From'] = settings.EMAIL_HOST_USER
-    msg['To'] = ', '.join(recipients)
-    msg.attach(MIMEText(html_message, 'html'))
-    
+    message = {
+        
+        'Subject': {'Data': 'Your Feedly Newsletter'},
+        'Body' : {'Html':{'Data': html_message}},
+       
+           
+    }
 
-    # Set up the SMTP server connection
-    server = smtplib.SMTP(settings.EMAIL_HOST, settings.EMAIL_PORT)
-    server.starttls()
-    server.login(settings.EMAIL_HOST_USER, os.environ.get('EMAIL_PASSWORD'))
 
     # Send the email
-    server.sendmail(settings.EMAIL_HOST_USER, recipients, msg.as_string())
-    server.quit()
-
-    print('Newsletter sent successfully!')
+    try:
+        response = ses_client.send_email(
+            Source=settings.DEFAULT_FROM_EMAIL,
+            Destination={'ToAddresses': recipient_list},
+            Message=message,
+            
+          
+        )
+    except ClientError as e:
+        print(e.response['Error']['Message'])
+    else:
+        print('Email sent! Message ID:'),
+        print(response['MessageId'])
