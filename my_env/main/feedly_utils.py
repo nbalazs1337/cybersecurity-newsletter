@@ -62,6 +62,7 @@ def send_newsletter(recipient_list, data):
            
     }
 
+
     # Send the email
     try:
         response = ses_client.send_email(
