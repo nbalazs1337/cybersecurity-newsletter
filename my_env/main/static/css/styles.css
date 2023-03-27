@@ -1,6 +1,14 @@
 /*  CULORILE AROBS
 #0b68b6      albastru
-#57bc4f      verde            */
+#57bc4f      verde          
+
+<link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/styles.css' %}"
+    />
+    
+*/
 
 body {
     background-color: grey;
@@ -9,6 +17,8 @@ body {
 tbody{
     vertical-align: baseline;
 }
+
+
 
 .div_boxes{
     padding: 10px 15px 0px 15px;  

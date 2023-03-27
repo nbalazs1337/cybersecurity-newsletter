@@ -15,23 +15,19 @@
       ="device-width,"
       initial-scale="1.0"
     />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'css/styles.css' %}"
-    />
     <title>0-Day Newsletter</title>
   </head>
 
-  <body>
+  <body style="background-color: grey">
     <div class="container">
       <table id="table_full">
-        <tbody>
+        <tbody style="vertical-align: baseline">
           <!-- POZA AROBS -->
           <tr>
-            <td id="top_section">
+            <td id="top_section" style="width: 456pt; padding: 0in">
               <img
                 id="poza_top_section"
+                style="width: 100%"
                 src="https://acem.md/wp-content/uploads/2020/11/Logo_AROBS_Chisinau_color.jpg"
               />
             </td>
@@ -39,177 +35,539 @@
 
           <!-- ZERO DAY VULN NEWSLETTER -->
           <tr>
-            <td id="second_section">
-              <span id="text_second_section"
+            <td
+              id="second_section"
+              style="
+                width: 457pt;
+                background: #003b32;
+                padding: 20pt 30pt 20pt 30pt;
+              "
+            >
+              <span
+                id="text_second_section"
+                style="
+                  font-size: 17pt;
+                  font-family: Impact, sans-serif, serif, EmojiFont;
+                  color: rgb(255, 255, 255);
+                  text-transform: uppercase;
+                  letter-spacing: 1pt;
+                "
                 >Zero Day Vulnerability - Newsletter</span
               >
             </td>
           </tr>
 
           <!-- TEXT DE DEASUPRA TABELULUI + TABEL + TEXT SUB TABEL -->
-          
+
           <tr>
-            <td id="third_section">
-              <div class="div_boxes">
-                <div id="text_third_section_top">
-                  <p id="text_greet">Dear Subscribers,</p>
-                  <p class="text_opening">
-                    Welcome to our daily zero-day newsletter! Every day, our team
-                    scours the internet and various sources to bring you the
-                    latest and most critical zero-day vulnerabilities affecting
-                    businesses and individuals worldwide.
+            <td
+              id="third_section"
+              style="
+                background-color: #43916e;
+                width: 457pt;
+                border-top: none;
+                padding: 30pt 30pt 5pt 30pt;
+              "
+            >
+              <div
+                class="div_boxes"
+                style="
+                  padding: 10px 15px 0px 15px;
+                  border-radius: 5px;
+                  background-color: #247e80;
+                "
+              >
+                <div
+                  id="text_third_section_top"
+                  style="padding-top: 15px; padding-bottom: 10px"
+                >
+                  <p
+                    id="text_greet"
+                    style="
+                      font-family: Arial, sans-serif, serif, EmojiFont;
+                      color: white;
+                      font-weight: bold;
+                    "
+                  >
+                    Dear Subscribers,
                   </p>
-                  <p class="text_opening">
+                  <p
+                    class="text_opening"
+                    style="
+                      font-family: Arial, sans-serif, serif, EmojiFont;
+                      color: rgb(239, 247, 255);
+                    "
+                  >
+                    Welcome to our daily zero-day newsletter! Every day, our
+                    team scours the internet and various sources to bring you
+                    the latest and most critical zero-day vulnerabilities
+                    affecting businesses and individuals worldwide.
+                  </p>
+                  <p
+                    class="text_opening"
+                    style="
+                      font-family: Arial, sans-serif, serif, EmojiFont;
+                      color: rgb(239, 247, 255);
+                    "
+                  >
                     For those who may be unfamiliar with the term, a zero-day
                     vulnerability refers to a software flaw or weakness that is
                     unknown to the software vendor and has no patch or fix
-                    available. This leaves users vulnerable to cyberattacks, which
-                    can have devastating consequences.
+                    available. This leaves users vulnerable to cyberattacks,
+                    which can have devastating consequences.
                   </p>
                 </div>
               </div>
-             
-              <hr>
-              <br>
+
+              <hr
+                style="
+                  border: 2px solid #c2946f;
+                  text-decoration: none;
+                  opacity: 100;
+                  border-radius: 2px;
+                "
+              />
+              <br />
 
               <!-- TABELUL CU LISTA DE ISSUES -->
-              <div class="div_boxes">
-                <div style="background-color: #003b32; padding: 4px 5px 1px 5px; border-radius: 5px;">
-                  <h5>LATEST NEWS</h5>
+              <div
+                class="div_boxes"
+                style="
+                  padding: 10px 15px 0px 15px;
+                  border-radius: 5px;
+                  background-color: #247e80;
+                "
+              >
+                <div
+                  style="
+                    background-color: #003b32;
+                    padding: 4px 5px 1px 5px;
+                    border-radius: 5px;
+                  "
+                >
+                  <h5
+                    style="
+                      padding-left: 20px;
+                      color: white;
+                      font-weight: bold;
+                      text-decoration: underline;
+                    "
+                  >
+                    LATEST NEWS
+                  </h5>
                 </div>
-                 <p></p>
+                <p></p>
                 <table id="tabel_issues">
-                  <tbody>
+                  <tbody style="vertical-align: baseline">
                     <!-- HEADER DE TABEL -->
                     <tr>
-                      <td id="header_c1">
-                        <p class="header_title">Id</p>
+                      <td
+                        id="header_c1"
+                        style="
+                          text-align: center;
+                          width: 5%;
+                          padding: 0.75pt 0.75pt 0.75pt 0.75pt;
+                        "
+                      >
+                        <p
+                          class="header_title"
+                          style="
+                            color: white;
+                            font-size: 20px;
+                            font-weight: bold;
+                          "
+                        >
+                          Id
+                        </p>
                       </td>
-                      <td id="header_c2">
-                        <p class="header_title">Issue</p>
+                      <td
+                        id="header_c2"
+                        style="
+                          text-align: center;
+                          width: 45%;
+                          padding: 0.75pt 0.75pt 0.75pt 0.75pt;
+                        "
+                      >
+                        <p
+                          class="header_title"
+                          style="
+                            color: white;
+                            font-size: 20px;
+                            font-weight: bold;
+                          "
+                        >
+                          Issue
+                        </p>
                       </td>
-                      <td id="header_c3">
-                        <p class="header_title">Severity</p>
+                      <td
+                        id="header_c3"
+                        style="
+                          text-align: center;
+                          width: 25%;
+                          padding: 0.75pt 0.75pt 0.75pt 0.75pt;
+                        "
+                      >
+                        <p
+                          class="header_title"
+                          style="
+                            color: white;
+                            font-size: 20px;
+                            font-weight: bold;
+                          "
+                        >
+                          Severity
+                        </p>
                       </td>
-                      <td id="header_c3">
-                        <p class="header_title">URL</p>
+                      <td
+                        id="header_c3"
+                        style="
+                          text-align: center;
+                          width: 25%;
+                          padding: 0.75pt 0.75pt 0.75pt 0.75pt;
+                        "
+                      >
+                        <p
+                          class="header_title"
+                          style="
+                            color: white;
+                            font-size: 20px;
+                            font-weight: bold;
+                          "
+                        >
+                          URL
+                        </p>
                       </td>
                     </tr>
-  
+
                     <!-- AICI TREBUIE INSERAT FOR-ul CA SA POPULEZE LISTA DE VULNERABILITATI-->
-  
+
                     {% for result in results %}
-  
+
                     <tr>
                       <td>
-                        <p class="content_title">{{forloop.counter}}</p>
+                        <p
+                          class="content_title"
+                          style="
+                            color: white;
+                            text-decoration: none;
+                            padding: 0.75pt 0pt 0.75pt 0.75pt;
+                            font-size: 10pt;
+                            margin-top: 10px;
+                            text-align: center;
+                          "
+                        >
+                          {{forloop.counter}}
+                        </p>
                       </td>
                       <td>
-                        <p class="content_title">{{result.title}}</p>
+                        <p
+                          class="content_title"
+                          style="
+                            color: white;
+                            text-decoration: none;
+                            padding: 0.75pt 0pt 0.75pt 0.75pt;
+                            font-size: 10pt;
+                            margin-top: 10px;
+                            text-align: center;
+                          "
+                        >
+                          {{result.title}}
+                        </p>
                       </td>
-                      <td class="button_id">
-                        <button id="critical_button">Critical</button>
+                      <td
+                        class="button_id"
+                        style="text-align: center; vertical-align: top"
+                      >
+                        <button
+                          id="critical_button"
+                          style="
+                            border: none;
+                            background-color: rgb(187, 3, 3);
+                            color: white;
+                            border-radius: 50px;
+                            cursor: default;
+                            font-size: 12px;
+                            font-weight: bold;
+                            width: 60px;
+                            height: 26px;
+                            margin-top: 10px;
+                          "
+                        >
+                          Critical
+                        </button>
                       </td>
-                      <td class="button_id">
-                        <p class="content_title">
+                      <td
+                        class="button_id"
+                        style="text-align: center; vertical-align: top"
+                      >
+                        <p
+                          class="content_title"
+                          style="
+                            color: white;
+                            text-decoration: none;
+                            padding: 0.75pt 0pt 0.75pt 0.75pt;
+                            font-size: 10pt;
+                            margin-top: 10px;
+                            text-align: center;
+                          "
+                        >
                           <a href="{{result.alternate.0.href }}" target="_blank"
-                            ><button id="readmore_button">READ MORE!</button></a
+                            ><button
+                              class="readmore_button"
+                              style="
+                                width: 100px;
+                                border-radius: 50px;
+                                background-color: #aa8161;
+                                color: white;
+                                font-size: 12px;
+                                font-weight: bold;
+                                border: none;
+                              "
+                              onmouseover="this.style.backgroundColor='#003b32'"
+                              onmouseout="this.style.backgroundColor='#aa8161'"
+                            >
+                              READ MORE!
+                            </button></a
                           >
                         </p>
                       </td>
-                      
                     </tr>
-  
+
                     {% endfor %}
                   </tbody>
                 </table>
               </div>
-              
 
-              <hr>
-              <br>
-
+              <hr
+                style="
+                  border: 2px solid #c2946f;
+                  text-decoration: none;
+                  opacity: 100;
+                  border-radius: 2px;
+                "
+              />
+              <br />
 
               <!-- SPECIAL MENTIONS -->
-              <div class="div_boxes">
-              <div style="background-color: #003b32; padding: 4px 5px 1px 5px; border-radius: 5px;">
-                <h5>NEW DISCLOSURE</h5>
-              </div>     
-               <p></p>
-                  <table>
-                    <tbody>
-                      <tr>
-
-                        <td style="width: 25%; text-align: center;">
-                          <p class="header_title">CVE</p>
-                        </td>
-
-                        <td style="width: auto; text-align: center;">
-                          <p class="header_title">Issue</p>
-                        </td>
-                        
-                        <td style="width: 25%; text-align: center;">
-                          <p class="header_title">URL</p>
-                        </td>
-                      </tr>
-
-
-                      <tr>
-
-                        <td style="text-align: center;">
-                          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23397" target="_blank" style="color: white; font-size: smaller;">
-                            <strong>CVE-2023-23397</strong>
-                          </a>
-                        </td>
-                        <td>
-                          <p class="content_title">CVE-2023-23397 is an elevation of privilege (EoP) vulnerability in Microsoft Outlook.</p>
-                        </td>
-                        <td class="button_id">
-                          <p class="content_title">
-                            <a href="https://www.trendmicro.com/en_us/research/23/c/patch-cve-2023-23397-immediately-what-you-need-to-know-and-do.html" target="_blank"
-                              ><button id="readmore_button">READ MORE!</button></a>
-                          </p>
-                        </td>
-                      </tr>
-    
-                    
-                    </tbody>
-                  </table>
+              <div
+                class="div_boxes"
+                style="
+                  padding: 10px 15px 0px 15px;
+                  border-radius: 5px;
+                  background-color: #247e80;
+                "
+              >
+                <div
+                  style="
+                    background-color: #003b32;
+                    padding: 4px 5px 1px 5px;
+                    border-radius: 5px;
+                  "
+                >
+                  <h5
+                    style="
+                      padding-left: 20px;
+                      color: white;
+                      font-weight: bold;
+                      text-decoration: underline;
+                    "
+                  >
+                    NEW DISCLOSURE
+                  </h5>
                 </div>
+                <p></p>
+                <table>
+                  <tbody style="vertical-align: baseline">
+                    <tr>
+                      <td style="width: 25%; text-align: center">
+                        <p
+                          class="header_title"
+                          style="
+                            color: white;
+                            font-size: 20px;
+                            font-weight: bold;
+                          "
+                        >
+                          CVE
+                        </p>
+                      </td>
 
-                 
-                  <hr>
+                      <td style="width: auto; text-align: center">
+                        <p
+                          class="header_title"
+                          style="
+                            color: white;
+                            font-size: 20px;
+                            font-weight: bold;
+                          "
+                        >
+                          Issue
+                        </p>
+                      </td>
 
+                      <td style="width: 25%; text-align: center">
+                        <p
+                          class="header_title"
+                          style="
+                            color: white;
+                            font-size: 20px;
+                            font-weight: bold;
+                          "
+                        >
+                          URL
+                        </p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td style="text-align: center">
+                        <a
+                          href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23397"
+                          target="_blank"
+                          style="color: white; font-size: smaller"
+                          onmouseover="this.style.color='#003b32'"
+                            onmouseout="this.style.color='white'"
+                        >
+                          <strong>CVE-2023-23397</strong>
+                        </a>
+                      </td>
+                      <td>
+                        <p
+                          class="content_title"
+                          style="
+                            color: white;
+                            text-decoration: none;
+                            padding: 0.75pt 0pt 0.75pt 0.75pt;
+                            font-size: 10pt;
+                            margin-top: 10px;
+                            text-align: center;
+                          "
+                        >
+                          CVE-2023-23397 is an elevation of privilege (EoP)
+                          vulnerability in Microsoft Outlook.
+                        </p>
+                      </td>
+                      <td class="button_id">
+                        <p
+                          class="content_title"
+                          style="
+                            color: white;
+                            text-decoration: none;
+                            padding: 0.75pt 0pt 0.75pt 0.75pt;
+                            font-size: 10pt;
+                            margin-top: 10px;
+                            text-align: center;
+                          "
+                        >
+                          <a
+                            href="https://www.trendmicro.com/en_us/research/23/c/patch-cve-2023-23397-immediately-what-you-need-to-know-and-do.html"
+                            target="_blank"
+                            ><button
+                              id="readmore_button"
+                              style="
+                                width: 100px;
+                                border-radius: 50px;
+                                background-color: #aa8161;
+                                color: white;
+                                font-size: 12px;
+                                font-weight: bold;
+                                border: none;
+                              "
+                              onmouseover="this.style.backgroundColor='#003b32'"
+                              onmouseout="this.style.backgroundColor='#aa8161'"
+                            >
+                              READ MORE!
+                            </button></a
+                          >
+                        </p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <hr
+                style="
+                  border: 2px solid #c2946f;
+                  text-decoration: none;
+                  opacity: 100;
+                  border-radius: 2px;
+                "
+              />
 
               <!-- TEXT DE SUB TABEL -->
-              <br>
-              <div class="div_boxes">
-                <div id="text_third_section_bottom">
-                <p class="under_table">
-                  Please reply to this email if you have any questions or if you
-                  require any further assistance.
-                </p>
-                <p class="under_table">
-                  Thank you for your commitment to security.
-                </p>
-                <p class="under_table">Cyber Security Team</p>
+              <br />
+              <div
+                class="div_boxes"
+                style="
+                  padding: 10px 15px 0px 15px;
+                  border-radius: 5px;
+                  background-color: #247e80;
+                "
+              >
+                <div
+                  id="text_third_section_bottom"
+                  style="padding-top: 5px; padding-bottom: 5px"
+                >
+                  <p
+                    class="under_table"
+                    style="
+                      font-family: Arial, sans-serif, serif, EmojiFont;
+                      color: rgb(239, 247, 255);
+                    "
+                  >
+                    Please reply to this email if you have any questions or if
+                    you require any further assistance.
+                  </p>
+                  <p
+                    class="under_table"
+                    style="
+                      font-family: Arial, sans-serif, serif, EmojiFont;
+                      color: rgb(239, 247, 255);
+                    "
+                  >
+                    Thank you for your commitment to security.
+                  </p>
+                  <p
+                    class="under_table"
+                    style="
+                      font-family: Arial, sans-serif, serif, EmojiFont;
+                      color: rgb(239, 247, 255);
+                    "
+                  >
+                    Cyber Security Team
+                  </p>
                 </div>
               </div>
-              <hr>
+              <hr
+                style="
+                  border: 2px solid #c2946f;
+                  text-decoration: none;
+                  opacity: 100;
+                  border-radius: 2px;
+                "
+              />
             </td>
           </tr>
-        
+
           <!-- FOOTER NEWSLETTER-->
           <tr>
-            <td id="x_templateFooter">
+            <td
+              id="x_templateFooter"
+              style="
+                text-align: center;
+                background-color: #003b32 !important;
+                padding: 6.75pt 0in;
+              "
+            >
               <!-- SOCIAL MEDIA LINKS  -->
-              <div id="div_social_buttons">
-                <table id="table_social_media_links">
-                  <tbody>
+              <div id="div_social_buttons" style="padding: 15px 0px 15px 0px">
+                <table id="table_social_media_links" style="width: 100%">
+                  <tbody style="vertical-align: baseline">
                     <tr>
                       <td></td>
 
-                      <td class="social_media_buttons">
+                      <td class="social_media_buttons" style="width: 0.6in">
                         <a
                           href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftwitter.com%2FAROBSSoftware&amp;data=05%7C01%7Chorea.rosca%40arobs.com%7Cc2d4a37c80004d4200a708db216ccc43%7C862d9b8748a54ed9b64a0f6677b9f873%7C0%7C0%7C638140523463324306%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=PX8ELm0ROoY83pbYl94LHKszCcC8lXm97xucfuV%2BoiA%3D&amp;reserved=0"
                           target="_blank"
@@ -218,14 +576,16 @@
                           originalsrc="https://twitter.com/AROBSSoftware"
                           shash="GG5+vGgqjGsLw/kT0YnjLZ6VDV/2QX9RtxYllUGoL76lW0hzBC2gA67y6Zoii0Egsa+iRGrDq5EcfK9kOUDVRywfabCf8ybELNlSgYbsNHaaV7gZbMe+0w8d1wvSwr7j8f/H/bJGd6XB2RtilkWCJlo2HZwFUP9++h963VvoVew="
                           title="Original URL: https://twitter.com/AROBSSoftware. Click or tap if you trust this link."
-                          ><img class="poza_social_media_button"
+                          ><img
+                            class="poza_social_media_button"
+                            style="width: 0.25in; height: 0.25in"
                             src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png"
                             alt="Twitter"
                           />
                         </a>
                       </td>
 
-                      <td class="social_media_buttons">
+                      <td class="social_media_buttons" style="width: 0.6in">
                         <a
                           href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.facebook.com%2FAROBS&amp;data=05%7C01%7Chorea.rosca%40arobs.com%7Cc2d4a37c80004d4200a708db216ccc43%7C862d9b8748a54ed9b64a0f6677b9f873%7C0%7C0%7C638140523463324306%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=A6h8ccn7h6%2BHbXRvhAhvzUpsGgwiQonmuCrhiPMtZos%3D&amp;reserved=0"
                           target="_blank"
@@ -234,7 +594,9 @@
                           originalsrc="https://www.facebook.com/AROBS"
                           shash="oajaKgk4UUdlfDTSm1h7kK0f8BT8scZlOgRTlNIngKJASZA7lkbGLGyMpyZurOEtjQORG1rVEw4mh1CPOEUNyui1gSS1TRoYhXIWrRJiUNIAftbz50RYwjG1cHRK0vd/yjMpdw8LsYXD4yd1PZnJy9ase6W7Key1JHc/iv8beRc="
                           title="Original URL: https://www.facebook.com/AROBS. Click or tap if you trust this link."
-                          ><img class="poza_social_media_button"
+                          ><img
+                            class="poza_social_media_button"
+                            style="width: 0.25in; height: 0.25in"
                             data-imagetype="External"
                             src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-48.png"
                             alt="Facebook"
@@ -242,7 +604,7 @@
                         </a>
                       </td>
 
-                      <td class="social_media_buttons">
+                      <td class="social_media_buttons" style="width: 0.6in">
                         <a
                           href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Farobs.com%2F&amp;data=05%7C01%7Chorea.rosca%40arobs.com%7Cc2d4a37c80004d4200a708db216ccc43%7C862d9b8748a54ed9b64a0f6677b9f873%7C0%7C0%7C638140523463324306%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=EgHJ%2FHLsl2yjNQwTMavvt52ppicap7h2yvpGM1wPfJo%3D&amp;reserved=0"
                           target="_blank"
@@ -251,7 +613,9 @@
                           originalsrc="https://arobs.com/"
                           shash="sDs/jqwYdNsRJO4OFPjqR0My3/Xjov5l/yFwL6FDRNR7Ll8uTDj3v70MuXDgxk5K0cxxPaHLE29OrT7mFv5cV86cN+/cSX+5Z9WCRUwzKx3I78xRjqS771H1k4Ma/QwbPyiOxbWJyHgzAoKHWL99AbgeQSyVp11z1v1yhFWTkEw="
                           title="Original URL: https://arobs.com/. Click or tap if you trust this link."
-                          ><img class="poza_social_media_button"
+                          ><img
+                            class="poza_social_media_button"
+                            style="width: 0.25in; height: 0.25in"
                             data-imagetype="External"
                             src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-link-48.png"
                             alt="Website"
@@ -259,7 +623,7 @@
                         </a>
                       </td>
 
-                      <td class="social_media_buttons">
+                      <td class="social_media_buttons" style="width: 0.6in">
                         <a
                           href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.instagram.com%2Farobs_transilvania%2F%3Fhl%3Den&amp;data=05%7C01%7Chorea.rosca%40arobs.com%7Cc2d4a37c80004d4200a708db216ccc43%7C862d9b8748a54ed9b64a0f6677b9f873%7C0%7C0%7C638140523463324306%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=DQxCh%2BD5TlzVeYvwGGYn%2F%2Bb7zuNGsw9qkn1fo1HKzxg%3D&amp;reserved=0"
                           target="_blank"
@@ -268,7 +632,9 @@
                           originalsrc="https://www.instagram.com/arobs_transilvania/?hl=en"
                           shash="VGK+EOCURrq4hkW39YkIXm30B8nvtlZlVXkjrIa2GDX6owawoN38YL62gg5D32vW69ecm6igod84PxY/yCZKnUhWtbCSfIClIX59lxbumBqDgu2cR4khsxaA0houQxoeZycTqYXv2oGOYcVEIF7ZAfia5R/hEKkvP0TuxY53d+s="
                           title="Original URL: https://www.instagram.com/arobs_transilvania/?hl=en. Click or tap if you trust this link."
-                          ><img class="poza_social_media_button"
+                          ><img
+                            class="poza_social_media_button"
+                            style="width: 0.25in; height: 0.25in"
                             data-imagetype="External"
                             src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-instagram-48.png"
                             alt="Instagram"
@@ -276,7 +642,7 @@
                         </a>
                       </td>
 
-                      <td class="social_media_buttons">
+                      <td class="social_media_buttons" style="width: 0.6in">
                         <a
                           href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Farobs%2F&amp;data=05%7C01%7Chorea.rosca%40arobs.com%7Cc2d4a37c80004d4200a708db216ccc43%7C862d9b8748a54ed9b64a0f6677b9f873%7C0%7C0%7C638140523463324306%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=4YTKBEbH7pzk5regjWtEuSgD8DER1hxby%2F8jNvaMgQc%3D&amp;reserved=0"
                           target="_blank"
@@ -285,7 +651,9 @@
                           originalsrc="https://www.linkedin.com/company/arobs/"
                           shash="xDYTPrGR7icWLmsQNLMJsBO4evATN6rAuGZosznmkv7UmNM6yFWlEvUXJMZxbKK+tdPhDxf64sYQi22EDaqwqki7ZiGJmmcWSTrkBXa4d8geQThei2n5R2rH7TJawsntPysTKDRD2ek5e54YNcIl91xw2NR+xZw2D2n596VJ3q8="
                           title="Original URL: https://www.linkedin.com/company/arobs/. Click or tap if you trust this link."
-                          ><img class="poza_social_media_button"
+                          ><img
+                            class="poza_social_media_button"
+                            style="width: 0.25in; height: 0.25in"
                             data-imagetype="External"
                             src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-linkedin-48.png"
                             alt="LinkedIn"
@@ -300,27 +668,65 @@
               </div>
 
               <!-- TEXT DE SUB SOCIAL MEDIA LINKS -->
-              <div id="div_under_social_buttons">
+              <div
+                id="div_under_social_buttons"
+                style="width: 457pt; padding: 0in 13.5pt 0in 13.5pt"
+              >
                 <table>
-                <tbody>
-                  <tr>
-                    <td>
-                      <p class="text_under_social" data-ogsc="black">
+                  <tbody style="vertical-align: baseline">
+                    <tr>
+                      <td>
+                        <p
+                          class="text_under_social"
+                          style="
+                            text-align: center;
+                            line-height: 150%;
+                            font-size: 10pt;
+                            line-height: 150%;
+                            font-family: Helvetica, sans-serif;
+                            color: rgb(255, 255, 255) !important;
+                          "
+                          data-ogsc="black"
+                        >
                           We assure you that all your private data is used
                           exclusively for the purpose mentioned and according to
-                          GDPR standards. </p>
-                        <p class="text_under_social" data-ogsc="black">
-                          Your cybersecurity team.</p>
-                        <p class="text_under_social" data-ogsc="black"><strong>AROBS | 2023</strong></p>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                          GDPR standards.
+                        </p>
+                        <p
+                          class="text_under_social"
+                          style="
+                            text-align: center;
+                            line-height: 150%;
+                            font-size: 10pt;
+                            line-height: 150%;
+                            font-family: Helvetica, sans-serif;
+                            color: rgb(255, 255, 255) !important;
+                          "
+                          data-ogsc="black"
+                        >
+                          Your cybersecurity team.
+                        </p>
+                        <p
+                          class="text_under_social"
+                          style="
+                            text-align: center;
+                            line-height: 150%;
+                            font-size: 10pt;
+                            line-height: 150%;
+                            font-family: Helvetica, sans-serif;
+                            color: rgb(255, 255, 255) !important;
+                          "
+                          data-ogsc="black"
+                        >
+                          <strong>AROBS | 2023</strong>
+                        </p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </td>
           </tr>
-
-
         </tbody>
       </table>
     </div>
