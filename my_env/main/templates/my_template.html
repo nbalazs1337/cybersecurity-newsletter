@@ -47,78 +47,144 @@
           </tr>
 
           <!-- TEXT DE DEASUPRA TABELULUI + TABEL + TEXT SUB TABEL -->
-
+          
           <tr>
             <td id="third_section">
-              <div id="text_third_section_top">
-                <p id="text_greet">Dear Subscribers,</p>
-                <p class="text_opening">
-                  Welcome to our daily zero-day newsletter! Every day, our team
-                  scours the internet and various sources to bring you the
-                  latest and most critical zero-day vulnerabilities affecting
-                  businesses and individuals worldwide.
-                </p>
-                <p class="text_opening">
-                  For those who may be unfamiliar with the term, a zero-day
-                  vulnerability refers to a software flaw or weakness that is
-                  unknown to the software vendor and has no patch or fix
-                  available. This leaves users vulnerable to cyberattacks, which
-                  can have devastating consequences.
-                </p>
-                <p class="text_opening">
-                  In the below table, we cover several zero-day vulnerabilities
-                  that have recently come to light.
-                </p>
+              <div class="div_boxes">
+                <div id="text_third_section_top">
+                  <p id="text_greet">Dear Subscribers,</p>
+                  <p class="text_opening">
+                    Welcome to our daily zero-day newsletter! Every day, our team
+                    scours the internet and various sources to bring you the
+                    latest and most critical zero-day vulnerabilities affecting
+                    businesses and individuals worldwide.
+                  </p>
+                  <p class="text_opening">
+                    For those who may be unfamiliar with the term, a zero-day
+                    vulnerability refers to a software flaw or weakness that is
+                    unknown to the software vendor and has no patch or fix
+                    available. This leaves users vulnerable to cyberattacks, which
+                    can have devastating consequences.
+                  </p>
+                </div>
               </div>
+             
+              <hr>
+              <br>
 
               <!-- TABELUL CU LISTA DE ISSUES -->
-              <table id="tabel_issues">
-                <tbody>
-                  <!-- HEADER DE TABEL -->
-                  <tr>
-                    <td id="header_c1">
-                      <p class="header_title">Id</p>
-                    </td>
-                    <td id="header_c2">
-                      <p class="header_title">Issue</p>
-                    </td>
-                    <td id="header_c3">
-                      <p class="header_title">URL</p>
-                    </td>
-                    <td id="header_c3">
-                      <p class="header_title">Severity</p>
-                    </td>
-                  </tr>
+              <div class="div_boxes">
+                <div style="background-color: #003b32; padding: 4px 5px 1px 5px; border-radius: 5px;">
+                  <h5>LATEST NEWS</h5>
+                </div>
+                 <p></p>
+                <table id="tabel_issues">
+                  <tbody>
+                    <!-- HEADER DE TABEL -->
+                    <tr>
+                      <td id="header_c1">
+                        <p class="header_title">Id</p>
+                      </td>
+                      <td id="header_c2">
+                        <p class="header_title">Issue</p>
+                      </td>
+                      <td id="header_c3">
+                        <p class="header_title">Severity</p>
+                      </td>
+                      <td id="header_c3">
+                        <p class="header_title">URL</p>
+                      </td>
+                    </tr>
+  
+                    <!-- AICI TREBUIE INSERAT FOR-ul CA SA POPULEZE LISTA DE VULNERABILITATI-->
+  
+                    {% for result in results %}
+  
+                    <tr>
+                      <td>
+                        <p class="content_title">{{forloop.counter}}</p>
+                      </td>
+                      <td>
+                        <p class="content_title">{{result.title}}</p>
+                      </td>
+                      <td class="button_id">
+                        <button id="critical_button">Critical</button>
+                      </td>
+                      <td class="button_id">
+                        <p class="content_title">
+                          <a href="{{result.alternate.0.href }}" target="_blank"
+                            ><button id="readmore_button">READ MORE!</button></a
+                          >
+                        </p>
+                      </td>
+                      
+                    </tr>
+  
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+              
 
-                  <!-- AICI TREBUIE INSERAT FOR-ul CA SA POPULEZE LISTA DE VULNERABILITATI-->
+              <hr>
+              <br>
 
-                  {% for result in results %}
 
-                  <tr>
-                    <td>
-                      <p class="content_title">{{forloop.counter}}</p>
-                    </td>
-                    <td>
-                      <p class="content_title">{{result.title}}</p>
-                    </td>
-                    <td class="button_id">
-                      <p class="content_title">
-                        <a href="{{result.alternate.0.href }}" target="_blank"
-                          ><button id="readmore_button">READ MORE!</button></a
-                        >
-                      </p>
-                    </td>
-                    <td class="button_id">
-                      <button id="critical_button">Critical</button>
-                    </td>
-                  </tr>
+              <!-- SPECIAL MENTIONS -->
+              <div class="div_boxes">
+              <div style="background-color: #003b32; padding: 4px 5px 1px 5px; border-radius: 5px;">
+                <h5>NEW DISCLOSURE</h5>
+              </div>     
+               <p></p>
+                  <table>
+                    <tbody>
+                      <tr>
 
-                  {% endfor %}
-                </tbody>
-              </table>
+                        <td style="width: 25%; text-align: center;">
+                          <p class="header_title">CVE</p>
+                        </td>
+
+                        <td style="width: auto; text-align: center;">
+                          <p class="header_title">Issue</p>
+                        </td>
+                        
+                        <td style="width: 25%; text-align: center;">
+                          <p class="header_title">URL</p>
+                        </td>
+                      </tr>
+
+
+                      <tr>
+
+                        <td style="text-align: center;">
+                          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23397" target="_blank" style="color: white; font-size: smaller;">
+                            <strong>CVE-2023-23397</strong>
+                          </a>
+                        </td>
+                        <td>
+                          <p class="content_title">CVE-2023-23397 is an elevation of privilege (EoP) vulnerability in Microsoft Outlook.</p>
+                        </td>
+                        <td class="button_id">
+                          <p class="content_title">
+                            <a href="https://www.trendmicro.com/en_us/research/23/c/patch-cve-2023-23397-immediately-what-you-need-to-know-and-do.html" target="_blank"
+                              ><button id="readmore_button">READ MORE!</button></a>
+                          </p>
+                        </td>
+                      </tr>
+    
+                    
+                    </tbody>
+                  </table>
+                </div>
+
+                 
+                  <hr>
+
 
               <!-- TEXT DE SUB TABEL -->
-              <div id="text_third_section_bottom">
+              <br>
+              <div class="div_boxes">
+                <div id="text_third_section_bottom">
                 <p class="under_table">
                   Please reply to this email if you have any questions or if you
                   require any further assistance.
@@ -127,10 +193,12 @@
                   Thank you for your commitment to security.
                 </p>
                 <p class="under_table">Cyber Security Team</p>
+                </div>
               </div>
+              <hr>
             </td>
           </tr>
-
+        
           <!-- FOOTER NEWSLETTER-->
           <tr>
             <td id="x_templateFooter">

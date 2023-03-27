@@ -6,6 +6,16 @@ body {
     background-color: grey;
 }
 
+tbody{
+    vertical-align: baseline;
+}
+
+.div_boxes{
+    padding: 10px 15px 0px 15px;  
+    border-radius: 5px; 
+    background-color: #247e80  ;
+}
+
 #top_section {
     width: 456pt;
     padding: 0in;
@@ -17,7 +27,7 @@ body {
 
 #second_section {
     width: 457pt;
-    background: #57bc4f;
+    background:  #003b32  ;
     padding: 20pt 30pt 20pt 30pt;
 }
 
@@ -30,15 +40,15 @@ body {
 }
 
 #third_section {
-    background-color: #0b68b6;
+    background-color: #43916e ;
     width: 457pt;
     border-top: none;
-    padding: 15pt 30pt 15pt 30pt;
+    padding: 30pt 30pt 5pt 30pt;
 }
 
 #text_greet {
     font-family: Arial, sans-serif, serif, EmojiFont;
-    color: rgb(239, 247, 255);
+    color: white;
     font-weight: bold;
 }
 
@@ -49,28 +59,29 @@ body {
 
 #text_third_section_top{
     padding-top: 15px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 
 #text_third_section_bottom{
-    padding-top: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #header_c1 {
     text-align: center;
-    width: 18.75pt; 
+    width: 5%; 
     padding: 0.75pt 0.75pt 0.75pt 0.75pt;
 }
 
 #header_c2 {
     text-align: center;
-    width: 187.5pt; 
+    width: 45%; 
     padding: 0.75pt 0.75pt 0.75pt 0.75pt;
 }
 
 #header_c3 {
     text-align: center;
-    width: 112.5pt; 
+    width: 25%; 
     padding: 0.75pt 0.75pt 0.75pt 0.75pt;
 }
 
@@ -83,15 +94,16 @@ body {
 .content_title{
     color: white;
     text-decoration: none;
-    padding: 0.75pt 0.75pt 0.75pt 0.75pt;
+    padding: 0.75pt 0pt 0.75pt 0.75pt;
     font-size: 10pt;
+    margin-top: 10px;
+    text-align: center;
 }
 
 #readmore_button{
     width: 100px;
-    margin-bottom: 15px;
     border-radius: 50px;
-    background-color: #57bc4f;
+    background-color: #aa8161;
     color: white;
     font-size: 12px;
     font-weight: bold;
@@ -100,7 +112,6 @@ body {
 
 #readmore_button:hover{
     width: 100px;
-    margin-bottom: 15px;
     border-radius: 50px;
     background-color: #647163;
     color: white;
@@ -110,17 +121,35 @@ body {
 
 .button_id{
     text-align: center;
+    vertical-align: top;
 }
 
 #critical_button{
-    margin-bottom: 25px;
     border: none;
     background-color: rgb(187, 3, 3);
     color: white;
     border-radius: 50px;
     cursor:default;
+    font-size: 12px;
+    font-weight: bold;
+    width: 60px;
+    height: 26px;
+    margin-top: 10px;
 }
 
+hr{
+    border: 2px solid #c2946f;
+    text-decoration: none;
+    opacity: 100;
+    border-radius: 2px;
+}
+
+h5{
+    padding-left: 20px;
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
 
 .under_table{
     font-family: Arial, sans-serif, serif, EmojiFont;
@@ -132,7 +161,7 @@ body {
 
 #x_templateFooter{
     text-align: center;
-    background-color: rgb(53, 53, 53) !important;
+    background-color: #003b32 !important;
     padding: 6.75pt 0in;
 }
 
@@ -141,7 +170,7 @@ body {
 }
 
 #div_social_buttons{
-    padding: 20px 0px 20px 0px;
+    padding: 15px 0px 15px 0px;
 }
 
 .social_media_buttons{
