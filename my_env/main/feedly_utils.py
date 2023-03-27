@@ -43,10 +43,6 @@ def send_newsletter(recipient_list, data):
 
     # Render the newsletter template with data from Feedly API
     html_message = render_to_string('my_template.html', {'results': data})
-<<<<<<< Updated upstream
-   
-=======
->>>>>>> Stashed changes
     plain_message = "Your Feedly Newsletter"
 
     # create an instance of the SES client
