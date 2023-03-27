@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+from django.core.mail import send_mail
 #to access environment variables
 import os 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -141,4 +142,15 @@ STATICFILES_FINDERS = [
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'email-smtp.eu_north-1'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'AKIA32QTBVBS7CN3HMC4'
+EMAIL_HOST_PASSWORD = 'BLQfnVaq6DcpYaXoC6z3Dqny6jffqjwmSCx+aU2ZbJbG'
+DEFAULT_FROM_EMAIL = 'florin.negrea@arobs.com'
+AWS_REGION = 'eu-north-1'
+AWS_ACCESS_KEY = 'AKIA32QTBVBS7C3PHCV3'
+AWS_SECRET_KEY = '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'
+
+

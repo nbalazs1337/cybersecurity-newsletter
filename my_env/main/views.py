@@ -7,6 +7,7 @@ from .models import FeedlyItem
 
 
 
+
 def my_view(request):
 
 
@@ -20,4 +21,9 @@ def my_view(request):
       items = FeedlyItem.objects.all()
       #return render(request, 'my_template.html', {'items': items})
    return render(request, 'my_template.html', {'results': results})
+
+
+
+
+
 
