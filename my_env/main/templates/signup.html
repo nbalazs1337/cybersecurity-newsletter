@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arobs Newsletter - Sign Up</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <table
+      align="center"
+      border="0"
+      cellspacing="0"
+      cellpadding="0"
+      style="width: 800px; margin-top: 150px; background-color: lightgrey"
+    >
+      <tbody>
+        <!-- HEADER AROBS -->
+        <tr>
+          <td width="100%">
+            <table
+              class="x_MsoNormalTable"
+              border="0"
+              cellspacing="0"
+              cellpadding="0"
+              style="width: 800px"
+            >
+              <tbody>
+                <tr
+                  style="width: 800px; height: 125px; background-color: #141d38"
+                >
+                  <td style="padding-left: 20px">
+                    <img
+                      width="280"
+                      height="82"
+                      src="https://arobs.com/wp-content/uploads/2020/09/arobs-transilvania-software-development-logo-2.png"
+                    />
+                  </td>
+                  <td
+                    style="
+                      background-color: #141d38;
+                      text-align: end;
+                      padding-right: 20px;
+                    "
+                  >
+                    <p
+                      width="280"
+                      height="82"
+                      style="
+                        font-family: 'Roboto';
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 28px;
+                        line-height: 20px;
+                        color: white;
+                        padding-right: 20px;
+                      "
+                    >
+                      Zero-day Newsletter
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <table style="width: 800px">
+              <tbody>
+                <tr>
+                  <td width="50%">
+                    <img
+                      src="https://i.imgur.com/AupQzq2.png"
+                      alt="missing photo"
+                      style="width: 250px"
+                    />
+                  </td>
+
+                  <td width="50%">
+                    <table border="0" style="width: 100%">
+                      <tbody>
+                        <tr>
+                          <td style="padding: 30px">
+                            <p
+                              style="
+                                font-family: 'Roboto';
+                                font-style: normal;
+                                letter-spacing: 2px;
+                                font-weight: bold;
+                                font-size: 32px;
+                                line-height: 20px;
+                                color: black;
+                              "
+                            >
+                              Join our newsletter
+                            </p>
+                            <p
+                              style="
+                                font-family: 'Roboto';
+                                font-style: normal;
+                                font-weight: bold;
+                                font-size: 20px;
+                                line-height: 20px;
+                                color: black;
+                              "
+                            >
+                              get weekly access to our latest news and findings
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 0px 30px 30px 30px">
+
+                            
+                            <form  method="post" action="{% url 'signup' %}">
+                              <table
+                                border="0"
+                                cellspacing="0"
+                                cellpadding="0"
+                                style="width: 100%"
+                              >
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <i
+                                        class="fa fa-envelope icon"
+                                        style="
+                                          background-color: #141d38;
+                                          padding: 15px;
+                                          color: white;
+                                        "
+                                      ></i>
+                                    </td>
+                                    <td>
+                                      <input
+                                        type="email"
+                                        name="email"
+                                        placeholder="john.doe@arobs.com"
+                                        style="
+                                          font-size: 20px;
+                                          height: 40px;
+                                          width: 300px;
+                                        "
+                                      />
+                                    </td>
+                                    <td>
+                                      {% csrf_token %}
+                                      {{ form.as_p }}
+                                      <input
+                                        type="submit"
+                                        value="Join"
+                                        style="
+                                          border: none;
+                                          margin-left: 20px;
+                                          font-size: 20px;
+                                          height: 44px;
+                                          width: 80px;
+                                          background-color: #7141b1;
+                                          color: white;
+                                        "
+                                      />
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan="2">
+                                      <p
+                                        style="
+                                          font-family: 'Roboto';
+                                          font-style: normal;
+                                          font-size: 16px;
+                                          line-height: 20px;
+                                          color: black;
+                                          padding-right: 20px;
+                                        "
+                                      >
+                                        <i>
+                                          No spam, we hate it more than you
+                                          do.</i
+                                        >
+                                      </p>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </form>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+
+        <!-- FOOTER -->
+        <tr>
+          <td colspan="2">
+            <table
+              class="x_MsoNormalTable"
+              cellspacing="0"
+              cellpadding="0"
+              style="width: 800px; background-color: #141d38"
+            >
+              <tbody>
+                <!-- SOCIAL MEDIA ICONS -->
+                <tr style="padding-top: 20px">
+                  <td>
+                    <table
+                      class="x_MsoNormalTable"
+                      cellspacing="0"
+                      cellpadding="0"
+                    >
+                      <tbody>
+                        <tr>
+                          <td width="50%">&nbsp</td>
+                          <td
+                            valign="top"
+                            style="padding: 0in 0in 0in 0in"
+                          >
+                            <table
+                              class="x_MsoNormalTable"
+                              border="0"
+                              cellspacing="0"
+                              cellpadding="0"
+                              align="left"
+                              style="border-collapse: collapse"
+                            >
+                              <tbody>
+                                <tr>
+                                  <td
+                                    valign="top"
+                                    style="
+                                      padding: 0in 7.5pt 6.75pt 0in;
+                                    "
+                                  >
+                                    <table
+                                      class="x_MsoNormalTable"
+                                      border="0"
+                                      cellspacing="0"
+                                      cellpadding="0"
+                                      width="100%"
+                                      style="
+                                        width: 100%;
+                                        border-collapse: collapse;
+                                      "
+                                    >
+                                      <tbody>
+                                        <tr>
+                                          <td
+                                            style="
+                                              padding: 3.75pt 7.5pt
+                                                3.75pt 6.75pt;
+                                            "
+                                          >
+                                            <table
+                                              class="x_MsoNormalTable"
+                                              border="0"
+                                              cellspacing="0"
+                                              cellpadding="0"
+                                              align="left"
+                                              width="0"
+                                              style="
+                                                border-collapse: collapse;
+                                              "
+                                            >
+                                              <tbody>
+                                                <tr>
+                                                  <td
+                                                    width="24"
+                                                    style="
+                                                      width: 0.25in;
+                                                      padding: 0in 0in
+                                                        0in 0in;
+                                                    "
+                                                  >
+                                                    <p
+                                                      class="x_MsoNormal"
+                                                      align="center"
+                                                      style="
+                                                        text-align: center;
+                                                      "
+                                                    >
+                                                      <a
+                                                        href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftwitter.com%2FAROBSSoftware&amp;data=05%7C01%7Chorea.rosca%40arobs.com%7C4169b392d18a47122b7208db3777801e%7C862d9b8748a54ed9b64a0f6677b9f873%7C0%7C0%7C638164758666654887%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=a9nlPYXLopEX3DVGlWhhVNJstoxn6i2Rw7XMW8I%2FHUE%3D&amp;reserved=0"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        data-auth="Verified"
+                                                        originalsrc="https://twitter.com/AROBSSoftware"
+                                                        shash="gtz3vufXC2GpvWwi5XbU+dFg7OSOUd6q3JNnk+38u4uJLFElfXK3vxQIniVqEDZlC3Rm/8u1Kegy6QQMx9HFToTtZdpJPl7IYE7VoX2rZOmwKZgUQ9oBA7/JERFNbOyxS1KSiQNgHrbTnDmZSlfElxWLv5hQDWj/LidPMeaaXrE="
+                                                        title="Original URL: https://twitter.com/AROBSSoftware. Click or tap if you trust this link."
+                                                        data-safelink="true"
+                                                        data-ogsc=""
+                                                        data-linkindex="4"
+                                                        style="
+                                                          color: rgb(
+                                                            138,
+                                                            184,
+                                                            255
+                                                          ) !important;
+                                                        "
+                                                        ><span
+                                                          style="
+                                                            color: rgb(
+                                                              222,
+                                                              152,
+                                                              255
+                                                            ) !important;
+                                                            text-decoration: none;
+                                                          "
+                                                          data-ogsc="blue"
+                                                          ><img
+                                                            data-imagetype="External"
+                                                            src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png"
+                                                            border="0"
+                                                            width="24"
+                                                            height="24"
+                                                            id="x__x0000_i1029"
+                                                            alt="Twitter"
+                                                            style="
+                                                              width: 0.25in;
+                                                              height: 0.25in;
+                                                            " /></span
+                                                      ></a>
+                                                    </p>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <td
+                            valign="top"
+                            style="padding: 0in 0in 0in 0in"
+                          >
+                            <table
+                              class="x_MsoNormalTable"
+                              border="0"
+                              cellspacing="0"
+                              cellpadding="0"
+                              align="left"
+                              style="border-collapse: collapse"
+                            >
+                              <tbody>
+                                <tr>
+                                  <td
+                                    valign="top"
+                                    style="
+                                      padding: 0in 7.5pt 6.75pt 0in;
+                                    "
+                                  >
+                                    <table
+                                      class="x_MsoNormalTable"
+                                      border="0"
+                                      cellspacing="0"
+                                      cellpadding="0"
+                                      width="100%"
+                                      style="
+                                        width: 100%;
+                                        border-collapse: collapse;
+                                      "
+                                    >
+                                      <tbody>
+                                        <tr>
+                                          <td
+                                            style="
+                                              padding: 3.75pt 7.5pt
+                                                3.75pt 6.75pt;
+                                            "
+                                          >
+                                            <table
+                                              class="x_MsoNormalTable"
+                                              border="0"
+                                              cellspacing="0"
+                                              cellpadding="0"
+                                              align="left"
+                                              width="0"
+                                              style="
+                                                border-collapse: collapse;
+                                              "
+                                            >
+                                              <tbody>
+                                                <tr>
+                                                  <td
+                                                    width="24"
+                                                    style="
+                                                      width: 0.25in;
+                                                      padding: 0in 0in
+                                                        0in 0in;
+                                                    "
+                                                  >
+                                                    <p
+                                                      class="x_MsoNormal"
+                                                      align="center"
+                                                      style="
+                                                        text-align: center;
+                                                      "
+                                                    >
+                                                      <a
+                                                        href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.facebook.com%2FAROBS&amp;data=05%7C01%7Chorea.rosca%40arobs.com%7C4169b392d18a47122b7208db3777801e%7C862d9b8748a54ed9b64a0f6677b9f873%7C0%7C0%7C638164758666654887%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=PQZ5G1ZgBxcOYJIpg2b7RthqsHBFmHKHtkr9thLZKIQ%3D&amp;reserved=0"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        data-auth="Verified"
+                                                        originalsrc="https://www.facebook.com/AROBS"
+                                                        shash="bYTjWYCOHVuu0+TWqOBQwXLB+XBAYLjlSWRmKrUSzU3fL7K3bYksJfqpx9bO13XXmv3uuyYc8okVM5boO3Qfy8TJJPmZe8qQFLf69hXzSmJA+WyyAe4o6DC5hVxwxZ09C+baxZ3YkvsEwES9C3GCoVWmjA407uLmk9FYjDNszcg="
+                                                        title="Original URL: https://www.facebook.com/AROBS. Click or tap if you trust this link."
+                                                        data-safelink="true"
+                                                        data-ogsc=""
+                                                        data-linkindex="5"
+                                                        style="
+                                                          color: rgb(
+                                                            138,
+                                                            184,
+                                                            255
+                                                          ) !important;
+                                                        "
+                                                        ><span
+                                                          style="
+                                                            color: rgb(
+                                                              222,
+                                                              152,
+                                                              255
+                                                            ) !important;
+                                                            text-decoration: none;
+                                                          "
+                                                          data-ogsc="blue"
+                                                          ><img
+                                                            data-imagetype="External"
+                                                            src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-48.png"
+                                                            border="0"
+                                                            width="24"
+                                                            height="24"
+                                                            id="x__x0000_i1028"
+                                                            alt="Facebook"
+                                                            style="
+                                                              width: 0.25in;
+                                                              height: 0.25in;
+                                                            " /></span
+                                                      ></a>
+                                                    </p>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <td
+                            valign="top"
+                            style="padding: 0in 0in 0in 0in"
+                          >
+                            <table
+                              class="x_MsoNormalTable"
+                              border="0"
+                              cellspacing="0"
+                              cellpadding="0"
+                              align="left"
+                              style="border-collapse: collapse"
+                            >
+                              <tbody>
+                                <tr>
+                                  <td
+                                    valign="top"
+                                    style="
+                                      padding: 0in 7.5pt 6.75pt 0in;
+                                    "
+                                  >
+                                    <table
+                                      class="x_MsoNormalTable"
+                                      border="0"
+                                      cellspacing="0"
+                                      cellpadding="0"
+                                      width="100%"
+                                      style="
+                                        width: 100%;
+                                        border-collapse: collapse;
+                                      "
+                                    >
+                                      <tbody>
+                                        <tr>
+                                          <td
+                                            style="
+                                              padding: 3.75pt 7.5pt
+                                                3.75pt 6.75pt;
+                                            "
+                                          >
+                                            <table
+                                              class="x_MsoNormalTable"
+                                              border="0"
+                                              cellspacing="0"
+                                              cellpadding="0"
+                                              align="left"
+                                              width="0"
+                                              style="
+                                                border-collapse: collapse;
+                                              "
+                                            >
+                                              <tbody>
+                                                <tr>
+                                                  <td
+                                                    width="24"
+                                                    style="
+                                                      width: 0.25in;
+                                                      padding: 0in 0in
+                                                        0in 0in;
+                                                    "
+                                                  >
+                                                    <p
+                                                      class="x_MsoNormal"
+                                                      align="center"
+                                                      style="
+                                                        text-align: center;
+                                                      "
+                                                    >
+                                                      <a
+                                                        href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Farobs.com%2F&amp;data=05%7C01%7Chorea.rosca%40arobs.com%7C4169b392d18a47122b7208db3777801e%7C862d9b8748a54ed9b64a0f6677b9f873%7C0%7C0%7C638164758666654887%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=f3%2B1s5pEIA71WPB6duJLj5LjkAQkPk5ST%2F9m3I1qAn8%3D&amp;reserved=0"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        data-auth="Verified"
+                                                        originalsrc="https://arobs.com/"
+                                                        shash="NukM6o3mBTUdWL2FOeRuWcsUSg77czYr4z+p8wi5T/jsMrQv/88yKdwLCRljmq2WP0JaWTnpBNhcVgpmsnbJppUGigVS1k0NDIK0ymu+6YqQ9QztcT70q35sglyTXG1Yk35KEeUmymPGO+8Dh9TEoLLdY9HdH5NisGRBUNah3gQ="
+                                                        title="Original URL: https://arobs.com/. Click or tap if you trust this link."
+                                                        data-safelink="true"
+                                                        data-ogsc=""
+                                                        data-linkindex="6"
+                                                        style="
+                                                          color: rgb(
+                                                            138,
+                                                            184,
+                                                            255
+                                                          ) !important;
+                                                        "
+                                                        ><span
+                                                          style="
+                                                            color: rgb(
+                                                              222,
+                                                              152,
+                                                              255
+                                                            ) !important;
+                                                            text-decoration: none;
+                                                          "
+                                                          data-ogsc="blue"
+                                                          ><img
+                                                            data-imagetype="External"
+                                                            src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-link-48.png"
+                                                            border="0"
+                                                            width="24"
+                                                            height="24"
+                                                            id="x__x0000_i1027"
+                                                            alt="Website"
+                                                            style="
+                                                              width: 0.25in;
+                                                              height: 0.25in;
+                                                            " /></span
+                                                      ></a>
+                                                    </p>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <td
+                            valign="top"
+                            style="padding: 0in 0in 0in 0in"
+                          >
+                            <table
+                              class="x_MsoNormalTable"
+                              border="0"
+                              cellspacing="0"
+                              cellpadding="0"
+                              align="left"
+                              style="border-collapse: collapse"
+                            >
+                              <tbody>
+                                <tr>
+                                  <td
+                                    valign="top"
+                                    style="
+                                      padding: 0in 7.5pt 6.75pt 0in;
+                                    "
+                                  >
+                                    <table
+                                      class="x_MsoNormalTable"
+                                      border="0"
+                                      cellspacing="0"
+                                      cellpadding="0"
+                                      width="100%"
+                                      style="
+                                        width: 100%;
+                                        border-collapse: collapse;
+                                      "
+                                    >
+                                      <tbody>
+                                        <tr>
+                                          <td
+                                            style="
+                                              padding: 3.75pt 7.5pt
+                                                3.75pt 6.75pt;
+                                            "
+                                          >
+                                            <table
+                                              class="x_MsoNormalTable"
+                                              border="0"
+                                              cellspacing="0"
+                                              cellpadding="0"
+                                              align="left"
+                                              width="0"
+                                              style="
+                                                border-collapse: collapse;
+                                              "
+                                            >
+                                              <tbody>
+                                                <tr>
+                                                  <td
+                                                    width="24"
+                                                    style="
+                                                      width: 0.25in;
+                                                      padding: 0in 0in
+                                                        0in 0in;
+                                                    "
+                                                  >
+                                                    <p
+                                                      class="x_MsoNormal"
+                                                      align="center"
+                                                      style="
+                                                        text-align: center;
+                                                      "
+                                                    >
+                                                      <a
+                                                        href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.instagram.com%2Farobs_transilvania%2F%3Fhl%3Den&amp;data=05%7C01%7Chorea.rosca%40arobs.com%7C4169b392d18a47122b7208db3777801e%7C862d9b8748a54ed9b64a0f6677b9f873%7C0%7C0%7C638164758666654887%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=ijZybpW5xLa4qYR8%2FJ9xvsbWtzZhP%2BEmgFMeDlFfG4k%3D&amp;reserved=0"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        data-auth="Verified"
+                                                        originalsrc="https://www.instagram.com/arobs_transilvania/?hl=en"
+                                                        shash="SGwfXwQvAYeQBBz3+gEpt6iBVAsUiUWZMFFdBXwwPFIYyVUXuawvT+FmopE3ifGIyNpv17EbJK6Zorkpi3CUuJa5Wn55b95UZi02NKwvG4KZ+MsBiFLWTUK+PvlBcqacgglxjEQ4IzzJBgt7mJqA51qtXoevfGCSo1tV4lk48RQ="
+                                                        title="Original URL: https://www.instagram.com/arobs_transilvania/?hl=en. Click or tap if you trust this link."
+                                                        data-safelink="true"
+                                                        data-ogsc=""
+                                                        data-linkindex="7"
+                                                        style="
+                                                          color: rgb(
+                                                            138,
+                                                            184,
+                                                            255
+                                                          ) !important;
+                                                        "
+                                                        ><span
+                                                          style="
+                                                            color: rgb(
+                                                              222,
+                                                              152,
+                                                              255
+                                                            ) !important;
+                                                            text-decoration: none;
+                                                          "
+                                                          data-ogsc="blue"
+                                                          ><img
+                                                            data-imagetype="External"
+                                                            src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-instagram-48.png"
+                                                            border="0"
+                                                            width="24"
+                                                            height="24"
+                                                            id="x__x0000_i1026"
+                                                            alt="Instagram"
+                                                            style="
+                                                              width: 0.25in;
+                                                              height: 0.25in;
+                                                            " /></span
+                                                      ></a>
+                                                    </p>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <td
+                            valign="top"
+                            style="padding: 0in 0in 0in 0in"
+                          >
+                            <table
+                              class="x_MsoNormalTable"
+                              border="0"
+                              cellspacing="0"
+                              cellpadding="0"
+                              align="left"
+                              style="border-collapse: collapse"
+                            >
+                              <tbody>
+                                <tr>
+                                  <td
+                                    valign="top"
+                                    style="padding: 0in 0in 6.75pt 0in"
+                                  >
+                                    <table
+                                      class="x_MsoNormalTable"
+                                      border="0"
+                                      cellspacing="0"
+                                      cellpadding="0"
+                                      width="100%"
+                                      style="
+                                        width: 100%;
+                                        border-collapse: collapse;
+                                      "
+                                    >
+                                      <tbody>
+                                        <tr>
+                                          <td
+                                            style="
+                                              padding: 3.75pt 7.5pt
+                                                3.75pt 6.75pt;
+                                            "
+                                          >
+                                            <table
+                                              class="x_MsoNormalTable"
+                                              border="0"
+                                              cellspacing="0"
+                                              cellpadding="0"
+                                              align="left"
+                                              width="0"
+                                              style="
+                                                border-collapse: collapse;
+                                              "
+                                            >
+                                              <tbody>
+                                                <tr>
+                                                  <td
+                                                    width="24"
+                                                    style="
+                                                      width: 0.25in;
+                                                      padding: 0in 0in
+                                                        0in 0in;
+                                                    "
+                                                  >
+                                                    <p
+                                                      class="x_MsoNormal"
+                                                      align="center"
+                                                      style="
+                                                        text-align: center;
+                                                      "
+                                                    >
+                                                      <a
+                                                        href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Farobs%2F&amp;data=05%7C01%7Chorea.rosca%40arobs.com%7C4169b392d18a47122b7208db3777801e%7C862d9b8748a54ed9b64a0f6677b9f873%7C0%7C0%7C638164758666654887%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=XopRSq58CHELMCqAB5t8l3wivUYhHeaw%2FIQePDWX2Es%3D&amp;reserved=0"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        data-auth="Verified"
+                                                        originalsrc="https://www.linkedin.com/company/arobs/"
+                                                        shash="gPKNx5PFaY+8A+IMB/o/WsaYoYuRmbMQ4ewP5o/ryOHQ9B2xsPjWZoeuH2a51F1SMeyGS7ud2pRArZ7ZO2GPqALz/2T1ztxOl3mtr3A+o0TFX6Jo6+MQtJUv7EvJ9/x08h/JKqG+WLl89raFOzHDFwM8membOfAA4wkxpGVSFO8="
+                                                        title="Original URL: https://www.linkedin.com/company/arobs/. Click or tap if you trust this link."
+                                                        data-safelink="true"
+                                                        data-ogsc=""
+                                                        data-linkindex="8"
+                                                        style="
+                                                          color: rgb(
+                                                            138,
+                                                            184,
+                                                            255
+                                                          ) !important;
+                                                        "
+                                                        ><span
+                                                          style="
+                                                            color: rgb(
+                                                              222,
+                                                              152,
+                                                              255
+                                                            ) !important;
+                                                            text-decoration: none;
+                                                          "
+                                                          data-ogsc="blue"
+                                                          ><img
+                                                            data-imagetype="External"
+                                                            src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-linkedin-48.png"
+                                                            border="0"
+                                                            width="24"
+                                                            height="24"
+                                                            id="x__x0000_i1025"
+                                                            alt="LinkedIn"
+                                                            style="
+                                                              width: 0.25in;
+                                                              height: 0.25in;
+                                                            " /></span
+                                                      ></a>
+                                                    </p>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <td width="50%">&nbsp</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- TEXT UNDER SOCIAL MEDIA ICONS -->
+                <tr style="padding-bottom: 20px">
+                  <td style="padding-left: 20px; padding-right: 20px">
+                    <table
+                      class="x_MsoNormalTable"
+                      cellspacing="0"
+                      cellpadding="0"
+                      width="100%"
+                    >
+                      <tbody>
+                        <tr>
+                          <td>
+                            <p
+                              class="x_MsoNormal"
+                              style="
+                                text-align: center;
+                                font-style: normal;
+                                font-family: 'Roboto';
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 20px;
+                                color: white;
+                                margin: 0px;
+                              "
+                              data-ogsc="black"
+                            >
+                              We assure you that all your private data
+                              is used exclusively for the purpose
+                              mentioned and according to GDPR standards.
+                            </p>
+                            <p
+                              class="x_MsoNormal"
+                              style="
+                                text-align: center;
+                                font-family: 'Roboto';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 15px;
+                                line-height: 20px;
+                                color: white;
+                              "
+                              data-ogsc="black"
+                            >
+                              Your cybersecurity team.
+                            </p>
+                            <p
+                              class="x_MsoNormal"
+                              style="
+                                text-align: center;
+                                font-family: 'Roboto';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 15px;
+                                line-height: 20px;
+                                color: white;
+                              "
+                              data-ogsc="black"
+                            >
+                              <strong>© 2023 Arobs</strong>
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </body>
+</html>

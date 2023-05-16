@@ -1,5 +1,7 @@
 from main.feedly_utils import get_feedly_data
 from main.feedly_utils import send_newsletter
+from django.core.mail import send_mail
+from main.models import Recipient
 import django
 import os
 
@@ -9,6 +11,7 @@ django.setup()
 
 # Fetch the data from the Feedly API
 data = get_feedly_data()
-recipient_list = ['florin.negrea@arobs.com']
+# print(data)
+recipient_list = Recipient.objects.values_list('email', flat=True)
 # Send the newsletter email to the list of recipients
 send_newsletter(recipient_list, data)

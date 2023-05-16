@@ -1,10 +1,12 @@
 import os
 import requests
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.conf import settings
 from .feedly_utils import get_feedly_data
 from .models import FeedlyItem
-
+from django.http import FileResponse
+from main.forms import SignupForm
+from main.models import Recipient
 
 
 
@@ -19,11 +21,29 @@ def my_view(request):
       feedly_item = FeedlyItem(title=title)
       feedly_item.save()
       items = FeedlyItem.objects.all()
-      #return render(request, 'my_template.html', {'items': items})
-   return render(request, 'my_template.html', {'results': results})
+      #return render(request, 'design.html', {'items': items})
+   #return render(request, 'design.html', {'results': results})
+   return render(request, 'design_update.html', {'results': results})
 
 
 
+def unsubscribe(request):
+    return render(request, 'unsubscribe.html')
 
 
+
+def signup(request):
+    if request.method == 'POST':
+        form = SignupForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            recipient, created = Recipient.objects.get_or_create(email=email)
+            if created:
+                # Optionally, you can perform additional actions
+                # (e.g., send a confirmation email, display a success message)
+                pass
+            #return redirectalert("gg")  # Redirect to the newsletter page after signup
+    else:
+        form = SignupForm()
+    return render(request, 'signup.html', {'form': form})
 

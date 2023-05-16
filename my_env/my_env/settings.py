@@ -18,7 +18,7 @@ import os
 #BASE_DIR = Path(__file__).resolve().parent.parent
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FEEDLY_ACCESS_TOKEN = "A8JCTCabGqCwwF3bAf2j_xHaE3fx52K_12RZ-fHzNfes0JGW5xvoYHTV7XBMmBhQ0noppF-pdgI4dExKDEUT0Mda4QhNUVlB5TjyRV6d1c-4NNCCgi75-Uhk_q2uw4Ar5X_rQsvipPNAtciO9rtm-LmP5AuvkKhEqYU4B0TyaCxqlO_gvfzuTLAhacfmHYwReFeOxKN4qfmoPoyGPHHn34KVuRw0O6o8kFoGAQUR3eR7wuq_W9XlXfxdj18:feedlydev"
+FEEDLY_ACCESS_TOKEN = "A0KyS6MsNEofNneE4wccVDuje1549tJzm78VzNlJ9cCWupmqv8mKtKkhuChQi6Fw1oJplc2nhFEbxpYIDUoefELnYN6WFOKzxo0GJ454kXOh1x6agEEM26crJYhiK2LazrsZw04AE7hS25cS-GDYO5md2_u09UTeM9shGVB_f9SJMDxZu2LOEpZ1TWgPbbLGApSJdA1fK9vBLNZgNqAVXv1GpqC48FAAAMYi9-V4j2w8F3-HFwR6ofw8_fY:feedlydev"
 
 
 
@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "main",
+    "main", 
 ]
 
 MIDDLEWARE = [
@@ -152,5 +152,4 @@ DEFAULT_FROM_EMAIL = 'florin.negrea@arobs.com'
 AWS_REGION = 'eu-north-1'
 AWS_ACCESS_KEY = 'AKIA32QTBVBS7C3PHCV3'
 AWS_SECRET_KEY = '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'
-
 

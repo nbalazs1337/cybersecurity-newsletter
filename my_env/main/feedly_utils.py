@@ -24,7 +24,7 @@ def get_feedly_data():
     #stream_id = 'feed/https://advisories.feedly.com/google/chrome/feed.json'
     count = 3
     url = f"https://cloud.feedly.com/v3/streams/contents?streamId={stream_id}&count={count}"
-    access_token = "A8JCTCabGqCwwF3bAf2j_xHaE3fx52K_12RZ-fHzNfes0JGW5xvoYHTV7XBMmBhQ0noppF-pdgI4dExKDEUT0Mda4QhNUVlB5TjyRV6d1c-4NNCCgi75-Uhk_q2uw4Ar5X_rQsvipPNAtciO9rtm-LmP5AuvkKhEqYU4B0TyaCxqlO_gvfzuTLAhacfmHYwReFeOxKN4qfmoPoyGPHHn34KVuRw0O6o8kFoGAQUR3eR7wuq_W9XlXfxdj18:feedlydev"
+    access_token = "A52LWkW9aRVfp4iPDvPfPkBtI9Gki_Kdv1T8oFndsZdAZsIwc0MfN7BR6DYzjrxFif65zmhZ8gKDk83C5q3NkYsN84igEwsYepFLMr66GpYjhEkihWe5ADyElK_T5i3ZYdPdzBQRixx8tzAd24Jen8Zhf--JG2dmdPkDcshntylpN8fFpgJbsfM2D67hFrjbJt_laHZ2nIawX4yaFbaoIHxM4lAwbMTFjhMSJZjec-9__Ynsu0GMA7l2AmY:feedlydev"
     headers = {
         "Authorization": f"OAuth {access_token}",
         "Content-Type": "application/json"
@@ -42,7 +42,7 @@ def send_newsletter(recipient_list, data):
 
 
     # Render the newsletter template with data from Feedly API
-    html_message = render_to_string('my_template.html', {'results': data})
+    html_message = render_to_string('design_update.html', {'data': data})
    
     plain_message = "Your Feedly Newsletter"
 
