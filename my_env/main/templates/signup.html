@@ -25,7 +25,7 @@
       border="0"
       cellspacing="0"
       cellpadding="0"
-      style="width: 800px; margin-top: 150px; background-color: lightgrey"
+      style="width: 800px; background-color: lightgrey"
     >
       <tbody>
         <!-- HEADER AROBS -->
@@ -78,13 +78,12 @@
           </td>
         </tr>
 
-
         <tr>
           <td>
             <table style="width: 800px">
               <tbody>
                 <tr>
-                  <td width="50%">
+                  <td width="40%" style="text-align: center;">
                     <img
                       src="https://i.imgur.com/AupQzq2.png"
                       alt="missing photo"
@@ -92,7 +91,7 @@
                     />
                   </td>
 
-                  <td width="50%">
+                  <td width="60%">
                     <table border="0" style="width: 100%">
                       <tbody>
                         <tr>
@@ -116,19 +115,31 @@
                                 font-style: normal;
                                 font-weight: bold;
                                 font-size: 20px;
-                                line-height: 20px;
                                 color: black;
                               "
                             >
                               get weekly access to our latest news and findings
                             </p>
+                            <p
+                            style="
+                              font-family: 'Roboto';
+                              font-style: normal;
+                              font-size: 16px;
+                              line-height: 20px;
+                              color: black;
+                              padding-right: 20px;
+                            "
+                          >
+                            <i>
+                              No spam, we hate it more than you
+                              do.</i
+                            >
+                          </p>
                           </td>
                         </tr>
                         <tr>
                           <td style="padding: 0px 30px 30px 30px">
-
-                            
-                            <form  method="post" action="{% url 'signup' %}">
+                            <form method="post" action="{% url 'signup' %}">
                               <table
                                 border="0"
                                 cellspacing="0"
@@ -137,46 +148,9 @@
                               >
                                 <tbody>
                                   <tr>
-                                    <td>
-                                      <i
-                                        class="fa fa-envelope icon"
-                                        style="
-                                          background-color: #141d38;
-                                          padding: 15px;
-                                          color: white;
-                                        "
-                                      ></i>
-                                    </td>
-                                    <td>
-                                      <input
-                                        type="email"
-                                        name="email"
-                                        placeholder="john.doe@arobs.com"
-                                        style="
-                                          font-size: 20px;
-                                          height: 40px;
-                                          width: 300px;
-                                        "
-                                      />
-                                    </td>
-                                    <td>
-                                      {% csrf_token %}
-                                      {{ form.as_p }}
-                                      <input
-                                        type="submit"
-                                        value="Join"
-                                        style="
-                                          border: none;
-                                          margin-left: 20px;
-                                          font-size: 20px;
-                                          height: 44px;
-                                          width: 80px;
-                                          background-color: #7141b1;
-                                          color: white;
-                                        "
-                                      />
-                                    </td>
+                                    <td>{% csrf_token %} {{ form }}</td>
                                   </tr>
+
                                   <tr>
                                     <td colspan="2">
                                       <p
@@ -188,12 +162,10 @@
                                           color: black;
                                           padding-right: 20px;
                                         "
-                                      >
-                                        <i>
-                                          No spam, we hate it more than you
-                                          do.</i
-                                        >
-                                      </p>
+                                      ><i>
+                                        Just hit ENTER after typing your email.</i
+                                      > </p>
+                                     
                                     </td>
                                   </tr>
                                 </tbody>
@@ -231,10 +203,7 @@
                       <tbody>
                         <tr>
                           <td width="50%">&nbsp</td>
-                          <td
-                            valign="top"
-                            style="padding: 0in 0in 0in 0in"
-                          >
+                          <td valign="top" style="padding: 0in 0in 0in 0in">
                             <table
                               class="x_MsoNormalTable"
                               border="0"
@@ -247,9 +216,7 @@
                                 <tr>
                                   <td
                                     valign="top"
-                                    style="
-                                      padding: 0in 7.5pt 6.75pt 0in;
-                                    "
+                                    style="padding: 0in 7.5pt 6.75pt 0in"
                                   >
                                     <table
                                       class="x_MsoNormalTable"
@@ -266,8 +233,8 @@
                                         <tr>
                                           <td
                                             style="
-                                              padding: 3.75pt 7.5pt
-                                                3.75pt 6.75pt;
+                                              padding: 3.75pt 7.5pt 3.75pt
+                                                6.75pt;
                                             "
                                           >
                                             <table
@@ -277,9 +244,7 @@
                                               cellpadding="0"
                                               align="left"
                                               width="0"
-                                              style="
-                                                border-collapse: collapse;
-                                              "
+                                              style="border-collapse: collapse"
                                             >
                                               <tbody>
                                                 <tr>
@@ -287,16 +252,13 @@
                                                     width="24"
                                                     style="
                                                       width: 0.25in;
-                                                      padding: 0in 0in
-                                                        0in 0in;
+                                                      padding: 0in 0in 0in 0in;
                                                     "
                                                   >
                                                     <p
                                                       class="x_MsoNormal"
                                                       align="center"
-                                                      style="
-                                                        text-align: center;
-                                                      "
+                                                      style="text-align: center"
                                                     >
                                                       <a
                                                         href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftwitter.com%2FAROBSSoftware&amp;data=05%7C01%7Chorea.rosca%40arobs.com%7C4169b392d18a47122b7208db3777801e%7C862d9b8748a54ed9b64a0f6677b9f873%7C0%7C0%7C638164758666654887%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=a9nlPYXLopEX3DVGlWhhVNJstoxn6i2Rw7XMW8I%2FHUE%3D&amp;reserved=0"
@@ -353,10 +315,7 @@
                               </tbody>
                             </table>
                           </td>
-                          <td
-                            valign="top"
-                            style="padding: 0in 0in 0in 0in"
-                          >
+                          <td valign="top" style="padding: 0in 0in 0in 0in">
                             <table
                               class="x_MsoNormalTable"
                               border="0"
@@ -369,9 +328,7 @@
                                 <tr>
                                   <td
                                     valign="top"
-                                    style="
-                                      padding: 0in 7.5pt 6.75pt 0in;
-                                    "
+                                    style="padding: 0in 7.5pt 6.75pt 0in"
                                   >
                                     <table
                                       class="x_MsoNormalTable"
@@ -388,8 +345,8 @@
                                         <tr>
                                           <td
                                             style="
-                                              padding: 3.75pt 7.5pt
-                                                3.75pt 6.75pt;
+                                              padding: 3.75pt 7.5pt 3.75pt
+                                                6.75pt;
                                             "
                                           >
                                             <table
@@ -399,9 +356,7 @@
                                               cellpadding="0"
                                               align="left"
                                               width="0"
-                                              style="
-                                                border-collapse: collapse;
-                                              "
+                                              style="border-collapse: collapse"
                                             >
                                               <tbody>
                                                 <tr>
@@ -409,16 +364,13 @@
                                                     width="24"
                                                     style="
                                                       width: 0.25in;
-                                                      padding: 0in 0in
-                                                        0in 0in;
+                                                      padding: 0in 0in 0in 0in;
                                                     "
                                                   >
                                                     <p
                                                       class="x_MsoNormal"
                                                       align="center"
-                                                      style="
-                                                        text-align: center;
-                                                      "
+                                                      style="text-align: center"
                                                     >
                                                       <a
                                                         href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.facebook.com%2FAROBS&amp;data=05%7C01%7Chorea.rosca%40arobs.com%7C4169b392d18a47122b7208db3777801e%7C862d9b8748a54ed9b64a0f6677b9f873%7C0%7C0%7C638164758666654887%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=PQZ5G1ZgBxcOYJIpg2b7RthqsHBFmHKHtkr9thLZKIQ%3D&amp;reserved=0"
@@ -475,10 +427,7 @@
                               </tbody>
                             </table>
                           </td>
-                          <td
-                            valign="top"
-                            style="padding: 0in 0in 0in 0in"
-                          >
+                          <td valign="top" style="padding: 0in 0in 0in 0in">
                             <table
                               class="x_MsoNormalTable"
                               border="0"
@@ -491,9 +440,7 @@
                                 <tr>
                                   <td
                                     valign="top"
-                                    style="
-                                      padding: 0in 7.5pt 6.75pt 0in;
-                                    "
+                                    style="padding: 0in 7.5pt 6.75pt 0in"
                                   >
                                     <table
                                       class="x_MsoNormalTable"
@@ -510,8 +457,8 @@
                                         <tr>
                                           <td
                                             style="
-                                              padding: 3.75pt 7.5pt
-                                                3.75pt 6.75pt;
+                                              padding: 3.75pt 7.5pt 3.75pt
+                                                6.75pt;
                                             "
                                           >
                                             <table
@@ -521,9 +468,7 @@
                                               cellpadding="0"
                                               align="left"
                                               width="0"
-                                              style="
-                                                border-collapse: collapse;
-                                              "
+                                              style="border-collapse: collapse"
                                             >
                                               <tbody>
                                                 <tr>
@@ -531,16 +476,13 @@
                                                     width="24"
                                                     style="
                                                       width: 0.25in;
-                                                      padding: 0in 0in
-                                                        0in 0in;
+                                                      padding: 0in 0in 0in 0in;
                                                     "
                                                   >
                                                     <p
                                                       class="x_MsoNormal"
                                                       align="center"
-                                                      style="
-                                                        text-align: center;
-                                                      "
+                                                      style="text-align: center"
                                                     >
                                                       <a
                                                         href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Farobs.com%2F&amp;data=05%7C01%7Chorea.rosca%40arobs.com%7C4169b392d18a47122b7208db3777801e%7C862d9b8748a54ed9b64a0f6677b9f873%7C0%7C0%7C638164758666654887%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=f3%2B1s5pEIA71WPB6duJLj5LjkAQkPk5ST%2F9m3I1qAn8%3D&amp;reserved=0"
@@ -597,10 +539,7 @@
                               </tbody>
                             </table>
                           </td>
-                          <td
-                            valign="top"
-                            style="padding: 0in 0in 0in 0in"
-                          >
+                          <td valign="top" style="padding: 0in 0in 0in 0in">
                             <table
                               class="x_MsoNormalTable"
                               border="0"
@@ -613,9 +552,7 @@
                                 <tr>
                                   <td
                                     valign="top"
-                                    style="
-                                      padding: 0in 7.5pt 6.75pt 0in;
-                                    "
+                                    style="padding: 0in 7.5pt 6.75pt 0in"
                                   >
                                     <table
                                       class="x_MsoNormalTable"
@@ -632,8 +569,8 @@
                                         <tr>
                                           <td
                                             style="
-                                              padding: 3.75pt 7.5pt
-                                                3.75pt 6.75pt;
+                                              padding: 3.75pt 7.5pt 3.75pt
+                                                6.75pt;
                                             "
                                           >
                                             <table
@@ -643,9 +580,7 @@
                                               cellpadding="0"
                                               align="left"
                                               width="0"
-                                              style="
-                                                border-collapse: collapse;
-                                              "
+                                              style="border-collapse: collapse"
                                             >
                                               <tbody>
                                                 <tr>
@@ -653,16 +588,13 @@
                                                     width="24"
                                                     style="
                                                       width: 0.25in;
-                                                      padding: 0in 0in
-                                                        0in 0in;
+                                                      padding: 0in 0in 0in 0in;
                                                     "
                                                   >
                                                     <p
                                                       class="x_MsoNormal"
                                                       align="center"
-                                                      style="
-                                                        text-align: center;
-                                                      "
+                                                      style="text-align: center"
                                                     >
                                                       <a
                                                         href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.instagram.com%2Farobs_transilvania%2F%3Fhl%3Den&amp;data=05%7C01%7Chorea.rosca%40arobs.com%7C4169b392d18a47122b7208db3777801e%7C862d9b8748a54ed9b64a0f6677b9f873%7C0%7C0%7C638164758666654887%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=ijZybpW5xLa4qYR8%2FJ9xvsbWtzZhP%2BEmgFMeDlFfG4k%3D&amp;reserved=0"
@@ -719,10 +651,7 @@
                               </tbody>
                             </table>
                           </td>
-                          <td
-                            valign="top"
-                            style="padding: 0in 0in 0in 0in"
-                          >
+                          <td valign="top" style="padding: 0in 0in 0in 0in">
                             <table
                               class="x_MsoNormalTable"
                               border="0"
@@ -752,8 +681,8 @@
                                         <tr>
                                           <td
                                             style="
-                                              padding: 3.75pt 7.5pt
-                                                3.75pt 6.75pt;
+                                              padding: 3.75pt 7.5pt 3.75pt
+                                                6.75pt;
                                             "
                                           >
                                             <table
@@ -763,9 +692,7 @@
                                               cellpadding="0"
                                               align="left"
                                               width="0"
-                                              style="
-                                                border-collapse: collapse;
-                                              "
+                                              style="border-collapse: collapse"
                                             >
                                               <tbody>
                                                 <tr>
@@ -773,16 +700,13 @@
                                                     width="24"
                                                     style="
                                                       width: 0.25in;
-                                                      padding: 0in 0in
-                                                        0in 0in;
+                                                      padding: 0in 0in 0in 0in;
                                                     "
                                                   >
                                                     <p
                                                       class="x_MsoNormal"
                                                       align="center"
-                                                      style="
-                                                        text-align: center;
-                                                      "
+                                                      style="text-align: center"
                                                     >
                                                       <a
                                                         href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Farobs%2F&amp;data=05%7C01%7Chorea.rosca%40arobs.com%7C4169b392d18a47122b7208db3777801e%7C862d9b8748a54ed9b64a0f6677b9f873%7C0%7C0%7C638164758666654887%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=XopRSq58CHELMCqAB5t8l3wivUYhHeaw%2FIQePDWX2Es%3D&amp;reserved=0"
@@ -872,9 +796,9 @@
                               "
                               data-ogsc="black"
                             >
-                              We assure you that all your private data
-                              is used exclusively for the purpose
-                              mentioned and according to GDPR standards.
+                              We assure you that all your private data is used
+                              exclusively for the purpose mentioned and
+                              according to GDPR standards.
                             </p>
                             <p
                               class="x_MsoNormal"
@@ -916,7 +840,6 @@
             </table>
           </td>
         </tr>
-
       </tbody>
     </table>
   </body>

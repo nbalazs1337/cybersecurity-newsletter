@@ -13,7 +13,7 @@ import smtplib
 import django
 import boto3
 from botocore.exceptions import ClientError
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'my_env.settings')
 django.setup()
@@ -98,7 +98,7 @@ def send_newsletter_smtp(recipient_list, data):
     #smtp_server.ehlo()
     smtp_server.starttls()
     #smtp_server.ehlo()
-    load_dotenv()
+    # load_dotenv()
     #email_password = os.getenv('EMAIL_HOST_PASSWORD')
     email_password = settings.EMAIL_HOST_PASSWORD
     
