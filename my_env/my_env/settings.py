@@ -84,9 +84,7 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR + "db.sqlite3",
-    }
-}
-
+    }}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -126,7 +124,7 @@ USE_TZ = True
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
-STATIC_URL = "static/"
+STATIC_URL = '/static/'
 #added by me
 STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn")
 #here we add the API key
@@ -152,4 +150,10 @@ DEFAULT_FROM_EMAIL = 'florin.negrea@arobs.com'
 AWS_REGION = 'eu-north-1'
 AWS_ACCESS_KEY = 'AKIA32QTBVBS7C3PHCV3'
 AWS_SECRET_KEY = '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'
+
+
+EMAIL_HOST_SMTP = 'smtp.office365.com'
+EMAIL_HOST_USER_SMTP = 'florin.negrea@arobs.com'
+EMAIL_HOST_PASSWORD = 'Oem23Rvp@22'
+
 
