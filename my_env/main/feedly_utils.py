@@ -13,6 +13,7 @@ import smtplib
 import django
 import boto3
 from botocore.exceptions import ClientError
+from dotenv import load_dotenv
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'my_env.settings')
 django.setup()
@@ -77,3 +78,56 @@ def send_newsletter(recipient_list, data):
     else:
         print('Email sent! Message ID:'),
         print(response['MessageId'])
+
+
+def send_newsletter_smtp(recipient_list, data):
+    # Render the newsletter template with data from Feedly API
+    html_message = render_to_string('my_template.html', {'data': data})
+    plain_message = "Your Feedly Newsletter"
+
+    # Set up the email message
+    message = MIMEMultipart('alternative')
+    message['Subject'] = 'Your Feedly Newsletter'
+    message['From'] = settings.DEFAULT_FROM_EMAIL
+    message['To'] = ', '.join(recipient_list)
+    message.attach(MIMEText(plain_message, 'plain'))
+    message.attach(MIMEText(html_message, 'html'))
+    
+    # Set up the SMTP server
+    smtp_server = smtplib.SMTP(settings.EMAIL_HOST_SMTP, settings.EMAIL_PORT)
+    #smtp_server.ehlo()
+    smtp_server.starttls()
+    #smtp_server.ehlo()
+    load_dotenv()
+    #email_password = os.getenv('EMAIL_HOST_PASSWORD')
+    email_password = settings.EMAIL_HOST_PASSWORD
+    
+    smtp_server.login(settings.EMAIL_HOST_USER_SMTP, email_password)
+    
+
+    # Send the email
+    try:
+        smtp_server.sendmail(settings.DEFAULT_FROM_EMAIL, recipient_list, message.as_string())
+    except smtplib.SMTPException as e:
+        print('Error: ', e)
+    else:
+        print('Email sent!')
+    finally:
+        smtp_server.quit()
+
+
+        
+
+from django.shortcuts import render, redirect
+from .models import Recipient
+
+def signup(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')  # Assuming the form field has the name 'email'
+        subscriber = Recipient(email=email)
+        subscriber.save()
+        # Additional logic or redirect after saving the subscriber
+        return redirect('success')  # Redirect to a success page or any other desired page
+
+    return render(request, 'signup.html')
+
