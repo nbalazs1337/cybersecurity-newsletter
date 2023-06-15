@@ -41,9 +41,12 @@ def signup(request):
             if created:
                 # Optionally, you can perform additional actions
                 # (e.g., send a confirmation email, display a success message)
+                return render(request, 'signup_success.html')
                 pass
             #return redirectalert("gg")  # Redirect to the newsletter page after signup
     else:
         form = SignupForm()
     return render(request, 'signup.html', {'form': form})
 
+def signup_success(request):
+    return render(request, 'signup_success.html')
