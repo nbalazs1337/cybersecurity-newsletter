@@ -23,7 +23,8 @@ def my_view(request):
       items = FeedlyItem.objects.all()
       #return render(request, 'design.html', {'items': items})
    #return render(request, 'design.html', {'results': results})
-   return render(request, 'design_update.html', {'results': results})
+   disclosures = NewDisclosure.objects.all()
+   return render(request, 'design_update.html', {'results': results, 'disclosures':disclosures})
 
 
 
@@ -50,3 +51,18 @@ def signup(request):
 
 def signup_success(request):
     return render(request, 'signup_success.html')
+
+
+from django.shortcuts import render
+from .models import NewDisclosure
+
+
+def disclosures_view(request):
+    disclosures = NewDisclosure.objects.all()
+    
+    print(disclosures)
+    
+    return render(request, 'design_update.html', {'disclosures': disclosures})
+
+
+

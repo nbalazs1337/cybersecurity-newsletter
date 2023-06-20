@@ -14,6 +14,8 @@ from pathlib import Path
 from django.core.mail import send_mail
 #to access environment variables
 import os 
+from builtins import print
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 #BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -140,20 +142,25 @@ STATICFILES_FINDERS = [
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'email-smtp.eu_north-1'
-EMAIL_PORT = 587
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#EMAIL_HOST = 'email-smtp.eu_north-1'
+#EMAIL_PORT = 587
+
+
+#EMAIL_HOST_USER = 'AKIA32QTBVBS7CN3HMC4'
+
+
+#AWS_REGION = 'eu-north-1'
+#AWS_ACCESS_KEY = 'AKIA32QTBVBS7C3PHCV3'
+#AWS_SECRET_KEY = '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'
+
+
+#EMAIL_HOST_SMTP = 'smtp.office365.com'
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'AKIA32QTBVBS7CN3HMC4'
-EMAIL_HOST_PASSWORD = 'BLQfnVaq6DcpYaXoC6z3Dqny6jffqjwmSCx+aU2ZbJbG'
-DEFAULT_FROM_EMAIL = 'florin.negrea@arobs.com'
-AWS_REGION = 'eu-north-1'
-AWS_ACCESS_KEY = 'AKIA32QTBVBS7C3PHCV3'
-AWS_SECRET_KEY = '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'
+EMAIL_PORT = 587
+DEFAULT_FROM_EMAIL = 'cybersecuritynewsletter@arobsgroup.com'
+EMAIL_HOST_PASSWORD = '?,99,atERsONCEnSERy'
+EMAIL_HOST_SMTP = 'mailgw01.arobsgroup.net'
 
-
-EMAIL_HOST_SMTP = 'smtp.office365.com'
-EMAIL_HOST_USER_SMTP = 'florin.negrea@arobs.com'
-EMAIL_HOST_PASSWORD = 'Oem23Rvp@22'
 
 

@@ -22,6 +22,7 @@ from django.urls import re_path
 from django.views.static import serve
 import os
 from main import views
+from main.views import disclosures_view
 
 
 urlpatterns = [
@@ -30,6 +31,7 @@ urlpatterns = [
     path("unsubscribe/", views.unsubscribe, name="unsubscribe"),
     path('signup/', views.signup, name='signup'),
     path('signup/success/', views.signup_success, name='signup_success'),
+    path('disclosures/', disclosures_view, name='disclosures'),
 
    
  
