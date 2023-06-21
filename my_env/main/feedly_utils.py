@@ -85,7 +85,7 @@ from .models import NewDisclosure
 def send_newsletter_smtp(recipient_list, data):
     disclosures = NewDisclosure.objects.all()
     # Render the newsletter template with data from Feedly API
-    html_message = render_to_string('design_update.html', {'disclosures': disclosures, 'data': data})
+    html_message = render_to_string('design_update_smaller.html', {'disclosures': disclosures, 'data': data})
     plain_message = "Your Feedly Newsletter"
     
 

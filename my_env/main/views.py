@@ -24,7 +24,7 @@ def my_view(request):
       #return render(request, 'design.html', {'items': items})
    #return render(request, 'design.html', {'results': results})
    disclosures = NewDisclosure.objects.all()
-   return render(request, 'design_update.html', {'results': results, 'disclosures':disclosures})
+   return render(request, 'design_update_smaller.html', {'results': results, 'disclosures':disclosures})
 
 
 
